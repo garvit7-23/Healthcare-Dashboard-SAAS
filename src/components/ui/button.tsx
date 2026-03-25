@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 
-type ButtonVariant = "primary" | "secondary" | "outline" | "danger";
+type ButtonVariant = "primary" | "secondary" | "outline" | "danger" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -22,6 +22,8 @@ const variants: Record<ButtonVariant, string> = {
     "border border-border text-text hover:bg-gray-100",
   danger:
     "bg-danger text-white hover:bg-red-600",
+    ghost: 
+    "bg-transparent hover:bg-gray-100 text-text",
 };
 
 const sizes: Record<ButtonSize, string> = {

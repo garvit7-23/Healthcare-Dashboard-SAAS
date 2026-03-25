@@ -38,16 +38,22 @@ export default function LoginPage() {
       }
 
       router.push("/dashboard");
-    } catch (err: any) {
-      setError(
-        err.code === "auth/invalid-credential"
-          ? "Invalid email or password"
-          : "Something went wrong. Please try again."
-      );
+    } catch (err: unknown) {
+      if (typeof err === "object" && err !== null && "code" in err) {
+        const error = err as { code: string };
+
+        setError(
+          error.code === "auth/invalid-credential"
+            ? "Invalid email or password"
+            : "Something went wrong. Please try again."
+        );
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
     } finally {
       setLoading(false);
     }
-  };
+   };
 
   return (
     <div className="bg-background min-h-screen flex flex-col">
@@ -121,4 +127,4 @@ export default function LoginPage() {
       <Footer />
     </div>
   );
-}
+ }

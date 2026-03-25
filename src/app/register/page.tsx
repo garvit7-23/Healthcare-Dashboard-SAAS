@@ -20,19 +20,19 @@ export default function RegisterPage() {
   const [error, setError] = useState("");
 
   const handleRegister = async () => {
-    try {
-      setLoading(true);
-      setError("");
+  try {
+    setLoading(true);
+    setError("");
 
-      await createUserWithEmailAndPassword(auth, email, password);
+    await createUserWithEmailAndPassword(auth, email, password);
 
-      router.push("/dashboard");
-    } catch (err: any) {
-      setError("Failed to create account. Try a stronger password.");
-    } finally {
-      setLoading(false);
-    }
-  };
+    router.push("/dashboard");
+  } catch {
+    setError("Failed to create account. Try a stronger password.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="bg-background min-h-screen flex flex-col">

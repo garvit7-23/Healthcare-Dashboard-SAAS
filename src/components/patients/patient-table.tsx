@@ -30,7 +30,7 @@ export const PatientTable = ({ patients }: PatientTableProps) => {
 
         {/* Body */}
         <tbody>
-          {patients.map((patient, index) => (
+          {patients.map((patient) => (
             <tr
               key={patient.id}
               className="border-t border-border hover:bg-gray-50 transition"
