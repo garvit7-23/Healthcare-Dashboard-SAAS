@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Hero = () => {
   return (
@@ -27,12 +28,16 @@ export const Hero = () => {
       </div>
 
       {/* Premium visual placeholder */}
-      <div className="mt-12 max-w-5xl mx-auto rounded-lg border border-border bg-surface shadow-md p-6">
-        <p className="text-sm text-muted">
-          📊 Dashboard Preview (we’ll upgrade this later)
-        </p>
-      </div>
-
+       <div className="mt-12 max-w-5xl mx-auto rounded-xl border border-border bg-surface shadow-lg overflow-hidden">
+        <Image
+          src="/dashboard-preview.png"
+          alt="Healthcare Dashboard Preview"
+          width={1200}
+          height={700}
+          className="w-full h-auto transition-transform duration-500 hover:scale-[1.02]"
+          priority
+        />
+       </div>
     </section>
   );
 };

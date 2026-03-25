@@ -8,11 +8,11 @@ A modern, production-ready **B2B Healthcare SaaS frontend application** built wi
 
 ## 🚀 Live Demo
 
-👉 https://your-deployed-link.vercel.app
+👉 https://healthcare-dashboard-saas.vercel.app
 
 ## 📂 GitHub Repository
 
-👉 https://github.com/your-username/your-repo
+👉 https://github.com/garvit7-23/Healthcare-Dashboard-SAAS
 
 ---
 
